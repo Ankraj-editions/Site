@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ankrajeditions.com/sitemap.xml
+Sitemap: https://ankrajeditions.com/sitemap.xml

@@ -1,5 +1,5 @@
-# Adresse unique du site : https://www.ankrajeditions.com
-# Le .fr et l'adresse sans www renvoient vers le .com (redirection définitive, bonne pour Google).
-https://ankrajeditions.fr/*      https://www.ankrajeditions.com/:splat  301!
-https://www.ankrajeditions.fr/*  https://www.ankrajeditions.com/:splat  301!
-https://ankrajeditions.com/*     https://www.ankrajeditions.com/:splat  301!
+# Adresse unique du site : https://ankrajeditions.com
+# (Netlify renvoie déjà www.ankrajeditions.com vers elle.)
+# Le .fr, avec ou sans www, renvoie vers le .com : redirection définitive, bonne pour Google.
+https://ankrajeditions.fr/*      https://ankrajeditions.com/:splat  301!
+https://www.ankrajeditions.fr/*  https://ankrajeditions.com/:splat  301!
