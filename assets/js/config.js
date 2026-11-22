@@ -19,8 +19,10 @@ window.AK = {
   //   afficherPrix: true  = les prix ci-dessous s'affichent partout (précommande, vente).
   // Le vrai prix payé est celui réglé dans Stripe / Amazon.
   afficherPrix: false,
-  prixPremium: "29,90 €",
-  prixStandard: "12,90 €",
+  // Laissés vides tant que les prix sont masqués (sinon un curieux les verrait dans ce fichier).
+  // Pour la précommande : écrire les prix ici, ex. "00,00 €", puis afficherPrix: true.
+  prixPremium: "",
+  prixStandard: "",
   // Contact
   email: "contact@ankrajeditions.com",
   instagram: "https://www.instagram.com/ankraj.editions",

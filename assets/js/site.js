@@ -500,11 +500,11 @@
     var t = (
       AK.prixPremium ||
       ($('[data-price="premium"]') || {}).textContent ||
-      "29,90 €"
+      ""
     )
       .replace(/[^\d,.]/g, "")
       .replace(",", ".");
-    return parseFloat(t) || 29.9;
+    return parseFloat(t) || 0;
   }
   function eur(n) {
     return n.toFixed(2).replace(".", ",") + " €";

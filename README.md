@@ -107,9 +107,9 @@ Le jour de la sortie : coller les liens Stripe et Amazon, puis passer à `venteO
 
 ### Afficher ou cacher les prix
 Dans `config.js`, `afficherPrix: false` : aucun prix n'apparaît sur le site (phase « me prévenir »).
-Pour la précommande : passer à `afficherPrix: true`, les prix `prixPremium` / `prixStandard` s'affichent partout.
+Pour la précommande : écrire les prix dans `prixPremium` / `prixStandard` (vides pour l'instant), puis passer à `afficherPrix: true`.
 Penser aussi à remettre le prix dans les données lues par Google : copier le bloc de `outils/offre-google-jsonld.txt`
-dans `je-grandis.html`, à la fin du premier bloc `application/ld+json`, juste avant `}</script>`, précédé d'une virgule.
+dans `je-grandis.html` (en remplaçant PRIX-ICI par le prix, au format 00.00), à la fin du premier bloc `application/ld+json`, juste avant `}</script>`, précédé d'une virgule.
 
 ### Ajouter un livre
 1. Copier `je-grandis.html` en `nom-du-livre.html` et remplacer les textes et images.
