@@ -146,3 +146,4 @@ les réponses arrivent dans Netlify › Forms. Hors du site en ligne (ouvert dep
 - V5 (22/11/2026) : prix masqués tant que `afficherPrix: false` (aucun prix écrit en dur dans les pages), prix retiré des données Google.
 - V6 (22/11/2026) : tampon de protection sur toutes les pages du livre montrées sur le site.
 - V7 (22/11/2026) : site plus fluide sur ordinateur (défilement natif, grain plein écran retiré), nouvelle intro légère (soleil + logo qui s'écrit), pastille « Faites défiler » bien visible sur ordinateur, prix retirés des fichiers, mention « Tous droits réservés » (LICENSE.md).
+- V8 (22/11/2026) : retour de l'intro où les morceaux du logo se regroupent en 3D avec le reflet de lumière, allégée (36 morceaux au lieu de 104, sans effets coûteux) et rallongée à environ 3,5 s pour que tout se mette en place.
