@@ -126,7 +126,8 @@ les réponses arrivent dans Netlify › Forms. Hors du site en ligne (ouvert dep
 ## 3. Avant la mise en ligne
 - Compléter les mentions `à compléter` : `mentions-legales.html`, `cgv.html` et la fiche technique de `je-grandis.html` (format, nombre de pages, ISBN).
 - Remplir `config.js` (Stripe, Amazon, e-mail, Instagram).
-- Hébergement : dépôt GitHub privé `ankraj-editions/site`, relié à **Netlify** (chaque modification envoyée sur GitHub met le site à jour). Relier ensuite le nom de domaine `ankrajeditions.com` sans toucher aux réglages e-mail (MX) chez OVH.
+- Hébergement : dépôt GitHub `Ankraj-editions/Site` (public : Netlify gratuit ne publie pas les dépôts privés d'organisation), relié à **Netlify** (chaque modification envoyée sur GitHub met le site à jour, 15 crédits sur 300 par mois).
+- Adresse officielle : `https://www.ankrajeditions.com`. Le fichier `_redirects` renvoie `ankrajeditions.com`, `ankrajeditions.fr` et `www.ankrajeditions.fr` vers elle. DNS chez OVH : A `@` vers 75.2.60.5 et CNAME `www` vers `ankraj-editions.netlify.app`, sans toucher aux réglages e-mail (MX).
   Ces hébergeurs servent les adresses sans `.html` (ex. `/je-grandis`), comme prévu dans `sitemap.xml`.
 - Statistiques sans cookies : coller le petit script de Cloudflare Web Analytics ou Plausible à l'endroit indiqué en bas de chaque page.
 
@@ -147,3 +148,4 @@ les réponses arrivent dans Netlify › Forms. Hors du site en ligne (ouvert dep
 - V6 (22/11/2026) : tampon de protection sur toutes les pages du livre montrées sur le site.
 - V7 (22/11/2026) : site plus fluide sur ordinateur (défilement natif, grain plein écran retiré), nouvelle intro légère (soleil + logo qui s'écrit), pastille « Faites défiler » bien visible sur ordinateur, prix retirés des fichiers, mention « Tous droits réservés » (LICENSE.md).
 - V8 (22/11/2026) : retour de l'intro où les morceaux du logo se regroupent en 3D avec le reflet de lumière, allégée (36 morceaux au lieu de 104, sans effets coûteux) et rallongée à environ 3,5 s pour que tout se mette en place.
+- V9 (22/11/2026) : adresse officielle en www (https://www.ankrajeditions.com) dans les liens Google, redirection du .fr et de l'adresse sans www (`_redirects`).
