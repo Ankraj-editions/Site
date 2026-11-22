@@ -145,3 +145,4 @@ les réponses arrivent dans Netlify › Forms. Hors du site en ligne (ouvert dep
 - V4 (22/11/2026) : « plus de 20 dessins » (standard Amazon : 20 dessins, premium : 25 dessins + pages d'activités), tuile « Des enfants qui leur ressemblent » rendue lisible.
 - V5 (22/11/2026) : prix masqués tant que `afficherPrix: false` (aucun prix écrit en dur dans les pages), prix retiré des données Google.
 - V6 (22/11/2026) : tampon de protection sur toutes les pages du livre montrées sur le site.
+- V7 (22/11/2026) : site plus fluide sur ordinateur (défilement natif, grain plein écran retiré), nouvelle intro légère (soleil + logo qui s'écrit), pastille « Faites défiler » bien visible sur ordinateur, prix retirés des fichiers, mention « Tous droits réservés » (LICENSE.md).

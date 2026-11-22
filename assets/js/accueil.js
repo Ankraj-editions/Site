@@ -858,83 +858,8 @@
       });
     }
   }
-  /* défilement doux sur ordinateur (souris) */
-  function smooth() {
-    if (window.__akhSmooth) return;
-    window.__akhSmooth = 1;
-    if (
-      !window.matchMedia("(pointer:fine)").matches ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    )
-      return;
-    if (window.Shopify && window.Shopify.designMode) return;
-    var target = window.scrollY,
-      cur = target,
-      running = false,
-      ours = false;
-    function max() {
-      return document.documentElement.scrollHeight - window.innerHeight;
-    }
-    function loop() {
-      cur += (target - cur) * 0.11;
-      if (Math.abs(target - cur) < 0.5) cur = target;
-      ours = true;
-      window.scrollTo(0, cur);
-      if (cur !== target) requestAnimationFrame(loop);
-      else running = false;
-    }
-    window.addEventListener(
-      "wheel",
-      function (e) {
-        if (e.ctrlKey || e.defaultPrevented) return;
-        var t = e.target;
-        while (t && t !== document.body) {
-          if (t.scrollHeight > t.clientHeight + 2) {
-            var oy = getComputedStyle(t).overflowY;
-            if (oy === "auto" || oy === "scroll") return;
-          }
-          t = t.parentElement;
-        }
-        if (
-          document.documentElement.classList.contains("overflow-hidden") ||
-          document.body.classList.contains("overflow-hidden")
-        )
-          return;
-        e.preventDefault();
-        var d =
-          e.deltaMode === 1
-            ? e.deltaY * 32
-            : e.deltaMode === 2
-              ? e.deltaY * window.innerHeight
-              : e.deltaY;
-        if (!running) {
-          target = cur = window.scrollY;
-        }
-        target = Math.max(0, Math.min(max(), target + d));
-        if (!running) {
-          running = true;
-          requestAnimationFrame(loop);
-        }
-      },
-      { passive: false },
-    );
-    window.addEventListener(
-      "scroll",
-      function () {
-        if (ours) {
-          ours = false;
-          return;
-        }
-        if (!running) {
-          target = cur = window.scrollY;
-        }
-      },
-      { passive: true },
-    );
-  }
   function boot() {
     document.querySelectorAll(".akh").forEach(init);
-    if (document.querySelector(".akh")) smooth();
   }
   if (document.readyState === "loading")
     document.addEventListener("DOMContentLoaded", boot);
@@ -1049,7 +974,15 @@
       return;
     }
     setTimeout(hop, 900);
-    arm();
+    setTimeout(function () {
+      /* sur ordinateur, on montre tout de suite qu'il faut défiler ; sur téléphone, c'est instinctif */
+      if (
+        window.scrollY < 40 &&
+        window.matchMedia("(min-width: 990px)").matches
+      )
+        show();
+      else arm();
+    }, 1400);
   }
   start();
 })();
